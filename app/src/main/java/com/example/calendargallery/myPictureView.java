@@ -18,7 +18,7 @@ public class myPictureView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         if (imagePath != null) {
-            Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
+            Bitmap bitmap = BitmapFactory.decodeFile(imagePath); //SD카드의 이미지를 불러오기 때문에 에뮬레이터에 사진이 없을 시, 작동하지 않음.
             canvas.drawBitmap(bitmap, (canvas.getWidth()-bitmap.getWidth())/2, (canvas.getHeight()-bitmap.getHeight())/2, null);
             bitmap.recycle();
         }

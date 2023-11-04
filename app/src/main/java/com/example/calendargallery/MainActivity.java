@@ -35,6 +35,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button button3 = (Button) findViewById(R.id.button3);
+        button3.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Gallery.class);
+
+                startActivity(intent);
+            }
+        });
+
 
 
 
